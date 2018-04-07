@@ -8,9 +8,14 @@ public class SimpleStringEncrypter {
     private static final String CHARSET = "UTF8";
     public static void main(String[] args) throws Exception{
         SimpleStringEncrypter simpleStringEncrypter = new SimpleStringEncrypter();
-        System.out.println(simpleStringEncrypter.encrypt("Hello"));
-        //Replace this string with whatever you find it in .dbeaver-data-sources.xml
-        System.out.println(simpleStringEncrypter.decrypt("OwEKLE4jpQ=="));
+        //System.out.println(simpleStringEncrypter.encrypt("Hello"));
+        // Get password from console
+        System.err.print("Please enter encrypted dbeaver password(file:.dbeaver-data-sources.xml): ");
+        String password = System.console().readLine();
+        // Print passowrd to see extraneous chars
+        System.err.println("\nYou have entered : \"" + password + "\"");
+        System.out.print(simpleStringEncrypter.decrypt(password));
+        System.err.println("");
     }
     public SimpleStringEncrypter() {
     }
