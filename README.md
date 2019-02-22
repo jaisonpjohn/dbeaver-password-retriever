@@ -14,6 +14,7 @@ git clone https://github.com/jaisonpjohn/dbeaver-password-retriever.git
 
 # Compile
 cd dbeaver-password-retriever
+
 javac SimpleStringEncrypter.java
 
 # Use
